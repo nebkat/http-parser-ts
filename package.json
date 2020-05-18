@@ -1,19 +1,16 @@
 {
-  "name": "http-parser-js",
-  "version": "0.5.2",
-  "description": "A pure JS HTTP parser for node.",
-  "main": "http-parser.js",
+  "name": "http-parser-ts",
+  "version": "0.1.1",
+  "description": "A pure TypeScript HTTP parser for node.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "python tests/test.py && node tests/iojs/test-http-parser-durability.js",
-    "testv12": "python tests/test.py --node-args=\"--http-parser=legacy\" && node --http-parser=legacy tests/iojs/test-http-parser-durability.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/creationix/http-parser-js.git"
+    "url": "git://github.com/nebkat/http-parser-ts.git"
   },
-  "files": [
-    "http-parser.js"
-  ],
   "keywords": [
     "http"
   ],
@@ -22,7 +19,12 @@
     "Jimb Esser (https://github.com/Jimbly)",
     "Lawrence Rowe (https://github.com/lrowe)",
     "Jan Schär (https://github.com/jscissr)",
-    "Paul Rütter (https://github.com/paulrutter)"
+    "Paul Rütter (https://github.com/paulrutter)",
+    "Nebojsa Cvetkovic (https://github.com/nebkat)"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "typescript": "^3.9.2"
+  }
 }
