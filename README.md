@@ -10,7 +10,7 @@ This is packaged as a standalone npm module.  To use in node, run HTTPParser.bin
 
 ```js
 // Monkey patch before you require http for the first time.
-require('http-parser-js').HTTPParser.bind();
+require('http-parser-ts').HTTPParser.bind();
 
 var http = require('http');
 // ...
