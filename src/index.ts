@@ -45,8 +45,9 @@ export class HTTPParser {
      * Binds the custom parser, must be run before the 'http' module is imported
      */
     static bind() {
-        ((process as any).binding as (binding: string) => any)('http_parser').HTTPParser = this;
-        ((process as any).binding as (binding: string) => any)('http_parser').methods = this.methods;
+        const httpParserBinding = ((process as any).binding as (binding: string) => any)('http_parser');
+        httpParserBinding.HTTPParser = this;
+        httpParserBinding.methods = this.methods;
 
         // If binding was requested ensure that it succeeded
         this.verify();
